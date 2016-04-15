@@ -19,6 +19,9 @@
 		E3E3675E1CC0D3F0003B8FAD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3675D1CC0D3F0003B8FAD /* InterfaceController.swift */; };
 		E3E367601CC0D3F0003B8FAD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3675F1CC0D3F0003B8FAD /* ExtensionDelegate.swift */; };
 		E3E367621CC0D3F0003B8FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E367611CC0D3F0003B8FAD /* Assets.xcassets */; };
+		E3E367731CC0D6B8003B8FAD /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367721CC0D6B8003B8FAD /* WorkoutPlan.swift */; };
+		E3E367751CC0D6CD003B8FAD /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367741CC0D6CD003B8FAD /* Exercise.swift */; };
+		E3E367771CC0DA30003B8FAD /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367761CC0DA30003B8FAD /* WorkoutSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		E3E3675F1CC0D3F0003B8FAD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		E3E367611CC0D3F0003B8FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3E367631CC0D3F0003B8FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E367721CC0D6B8003B8FAD /* WorkoutPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
+		E3E367741CC0D6CD003B8FAD /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		E3E367761CC0DA30003B8FAD /* WorkoutSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		E3E367391CC0D3F0003B8FAD /* GymBro */ = {
 			isa = PBXGroup;
 			children = (
+				E3E367711CC0D67F003B8FAD /* Model */,
 				E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */,
 				E3E3673C1CC0D3F0003B8FAD /* ViewController.swift */,
 				E3E3673E1CC0D3F0003B8FAD /* Main.storyboard */,
@@ -152,6 +159,16 @@
 				E3E367631CC0D3F0003B8FAD /* Info.plist */,
 			);
 			path = "GymBro WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E3E367711CC0D67F003B8FAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3E367721CC0D6B8003B8FAD /* WorkoutPlan.swift */,
+				E3E367761CC0DA30003B8FAD /* WorkoutSession.swift */,
+				E3E367741CC0D6CD003B8FAD /* Exercise.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E367731CC0D6B8003B8FAD /* WorkoutPlan.swift in Sources */,
+				E3E367771CC0DA30003B8FAD /* WorkoutSession.swift in Sources */,
+				E3E367751CC0D6CD003B8FAD /* Exercise.swift in Sources */,
 				E3E3673D1CC0D3F0003B8FAD /* ViewController.swift in Sources */,
 				E3E3673B1CC0D3F0003B8FAD /* AppDelegate.swift in Sources */,
 			);
