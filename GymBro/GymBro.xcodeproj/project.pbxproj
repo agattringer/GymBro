@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E3E3673B1CC0D3F0003B8FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */; };
-		E3E3673D1CC0D3F0003B8FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3673C1CC0D3F0003B8FAD /* ViewController.swift */; };
+		E3E3673D1CC0D3F0003B8FAD /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3673C1CC0D3F0003B8FAD /* ResultsTableViewController.swift */; };
 		E3E367401CC0D3F0003B8FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E3673E1CC0D3F0003B8FAD /* Main.storyboard */; };
 		E3E367421CC0D3F0003B8FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E367411CC0D3F0003B8FAD /* Assets.xcassets */; };
 		E3E367451CC0D3F0003B8FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E367431CC0D3F0003B8FAD /* LaunchScreen.storyboard */; };
@@ -22,6 +22,7 @@
 		E3E367731CC0D6B8003B8FAD /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367721CC0D6B8003B8FAD /* WorkoutPlan.swift */; };
 		E3E367751CC0D6CD003B8FAD /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367741CC0D6CD003B8FAD /* Exercise.swift */; };
 		E3E367771CC0DA30003B8FAD /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367761CC0DA30003B8FAD /* WorkoutSession.swift */; };
+		E3E3677B1CC0E1B8003B8FAD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3677A1CC0E1B8003B8FAD /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +70,7 @@
 /* Begin PBXFileReference section */
 		E3E367371CC0D3F0003B8FAD /* GymBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3E3673C1CC0D3F0003B8FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3E3673C1CC0D3F0003B8FAD /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		E3E3673F1CC0D3F0003B8FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3E367411CC0D3F0003B8FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3E367441CC0D3F0003B8FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		E3E367721CC0D6B8003B8FAD /* WorkoutPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutPlan.swift; sourceTree = "<group>"; };
 		E3E367741CC0D6CD003B8FAD /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		E3E367761CC0DA30003B8FAD /* WorkoutSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
+		E3E3677A1CC0E1B8003B8FAD /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +133,10 @@
 			children = (
 				E3E367711CC0D67F003B8FAD /* Model */,
 				E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */,
-				E3E3673C1CC0D3F0003B8FAD /* ViewController.swift */,
+				E3E3673C1CC0D3F0003B8FAD /* ResultsTableViewController.swift */,
 				E3E3673E1CC0D3F0003B8FAD /* Main.storyboard */,
 				E3E367411CC0D3F0003B8FAD /* Assets.xcassets */,
+				E3E3677A1CC0E1B8003B8FAD /* DataManager.swift */,
 				E3E367431CC0D3F0003B8FAD /* LaunchScreen.storyboard */,
 				E3E367461CC0D3F0003B8FAD /* Info.plist */,
 			);
@@ -307,9 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3E367731CC0D6B8003B8FAD /* WorkoutPlan.swift in Sources */,
+				E3E3677B1CC0E1B8003B8FAD /* DataManager.swift in Sources */,
 				E3E367771CC0DA30003B8FAD /* WorkoutSession.swift in Sources */,
 				E3E367751CC0D6CD003B8FAD /* Exercise.swift in Sources */,
-				E3E3673D1CC0D3F0003B8FAD /* ViewController.swift in Sources */,
+				E3E3673D1CC0D3F0003B8FAD /* ResultsTableViewController.swift in Sources */,
 				E3E3673B1CC0D3F0003B8FAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
