@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPlanTableViewController: UITableViewController {
+class AddPlanTableViewController: UITableViewController, NameTableViewCellDelegate {
     let nameReuseIdentifier = "NameCellIdentifier"
     let exerciseCellReuse = "ExerciseCellIdentifier"
     
@@ -34,10 +34,22 @@ class AddPlanTableViewController: UITableViewController {
     }
     
     func saveAndReturn(){
+        //only save when name is longer than 0
+        let name = self.currentName
         
+        if (name.characters.count != 0 || exercises.count > 0) {
+            DataManager.sharedManager.saveWorkoutPlan(WorkoutPlan(name: name, exercises: self.exercises))
+            navigationController?.popViewControllerAnimated(true)
+        }else{
+            let errorAlert = UIAlertController(title: "No name or exercises specified", message: "Please enter a name or add exercises to save this workout plan", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            errorAlert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: { (action: UIAlertAction!) in
+                errorAlert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            
+            presentViewController(errorAlert, animated: true, completion: nil)
+        }
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -53,7 +65,7 @@ class AddPlanTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if (indexPath.section == 0){
             let cell:NameTableViewCell = tableView.dequeueReusableCellWithIdentifier(nameReuseIdentifier, forIndexPath: indexPath) as! NameTableViewCell
-            
+            cell.delegate = self
             return cell
         }
         
@@ -76,5 +88,10 @@ class AddPlanTableViewController: UITableViewController {
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+    }
+    
+    func nameEdited(name: String) {
+        self.title = name
+        self.currentName = name
     }
 }

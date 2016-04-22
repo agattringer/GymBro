@@ -199,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="670" y="976"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Plan Table View Controller-->
         <scene sceneID="pkA-Jj-6uQ">
             <objects>
-                <tableViewController id="oke-zA-4Rt" sceneMemberID="viewController">
+                <tableViewController id="oke-zA-4Rt" customClass="AddPlanTableViewController" customModule="GymBro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lw5-jc-lmT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

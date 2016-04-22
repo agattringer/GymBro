@@ -23,7 +23,7 @@ class WorkoutPlan: NSObject, NSCoding{
         exercises = [Exercise]()
     }
     
-    convenience init(name:String){
+    convenience init(name:String, exercises: [Exercise]){
         self.init()
         self.name = name
     }

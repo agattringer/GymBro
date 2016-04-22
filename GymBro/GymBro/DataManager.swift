@@ -55,15 +55,6 @@ class DataManager: NSObject {
         NSKeyedArchiver.archiveRootObject(exercises, toFile: exercisesURL.path!)
     }
     
-//    func deleteExercise(exercise: Exercise){
-//        if var exercises = loadExercises(){
-//            if let index = exercises.indexOf(exercise){
-//                exercises.removeAtIndex(index)
-//                NSKeyedArchiver.archiveRootObject(exercises, toFile: exercisesURL.path!)
-//            }
-//        }
-//    }
-    
     func loadExercises() -> [Exercise]?{
         return NSKeyedUnarchiver.unarchiveObjectWithFile(exercisesURL.path!) as? [Exercise]
     }
@@ -76,16 +67,11 @@ class DataManager: NSObject {
         }
         workoutPlans.append(plan)
         
-        NSKeyedArchiver.archiveRootObject(workoutPlans, toFile: workoutPlansURL.path!)
+        saveWorkoutPlans(workoutPlans)
     }
     
-    func deleteWorkoutPlan(plan: WorkoutPlan){
-        if var workoutPlans = loadWorkoutPlans(){
-            if let index = workoutPlans.indexOf(plan){
-                workoutPlans.removeAtIndex(index)
-                NSKeyedArchiver.archiveRootObject(workoutPlans, toFile: workoutPlansURL.path!)
-            }
-        }
+    func saveWorkoutPlans(plans: [WorkoutPlan]){
+        NSKeyedArchiver.archiveRootObject(plans, toFile: workoutPlansURL.path!)
     }
     
     func loadWorkoutPlans() -> [WorkoutPlan]?{

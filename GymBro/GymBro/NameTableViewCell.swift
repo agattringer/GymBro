@@ -8,12 +8,18 @@
 
 import UIKit
 
-class NameTableViewCell: UITableViewCell {
+protocol NameTableViewCellDelegate{
+    func nameEdited(name:String)
+}
+
+class NameTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
+    var delegate:NameTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        name.delegate = self
         // Initialization code
     }
 
@@ -28,12 +34,19 @@ class NameTableViewCell: UITableViewCell {
         self.setSelected(false, animated: true)
     }
     
-    func getName() -> String{
-        if (name.text?.characters.count <= 0){
-            return ""
-        }else{
-            return name.text!
-        }
+    func textFieldDidEndEditing(textField: UITextField) {
+        delegate?.nameEdited(textField.text!)
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

@@ -98,6 +98,7 @@ class PlansExercisesTableViewController: UITableViewController{
         if editingStyle == .Delete {
             if (indexPath.section == 0){
                 plans.removeAtIndex(indexPath.row)
+                DataManager.sharedManager.saveWorkoutPlans(plans)
             }else{
                 exercises.removeAtIndex(indexPath.row)
                 DataManager.sharedManager.saveExercises(exercises)
