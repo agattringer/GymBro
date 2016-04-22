@@ -9,9 +9,9 @@
 import UIKit
 
 enum ExerciseIntensity : String{
-    case Low    //15 - 20 repetitions planned
-    case Medium //8 - 12
-    case High   //5 - 8
+    case Low = "Low"    //15 - 20 repetitions planned
+    case Medium = "Medium" //8 - 12
+    case High = "High"   //5 - 8
 }
 
 private struct PropertyKey {
@@ -24,7 +24,7 @@ private struct PropertyKey {
 }
 
 class Exercise: NSObject, NSCoding{
-    var name:NSString
+    var name:String
     var duration:Int
     var meanHeartrate:Int
     var weight:Int
@@ -40,9 +40,10 @@ class Exercise: NSObject, NSCoding{
         intensity = ExerciseIntensity.Low
     }
     
-    convenience init(name:String) {
+    convenience init(name:String, intensity:ExerciseIntensity) {
         self.init()
         self.name = name
+        self.intensity = intensity
     }
     
     required init?(coder aDecoder: NSCoder) {

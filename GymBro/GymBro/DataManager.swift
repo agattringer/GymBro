@@ -48,17 +48,21 @@ class DataManager: NSObject {
         }
         exercises.append(exercise)
         
+        saveExercises(exercises)
+    }
+    
+    func saveExercises(exercises: [Exercise]){
         NSKeyedArchiver.archiveRootObject(exercises, toFile: exercisesURL.path!)
     }
     
-    func deleteExercise(exercise: Exercise){
-        if var exercises = loadExercises(){
-            if let index = exercises.indexOf(exercise){
-                exercises.removeAtIndex(index)
-                NSKeyedArchiver.archiveRootObject(exercises, toFile: exercisesURL.path!)
-            }
-        }
-    }
+//    func deleteExercise(exercise: Exercise){
+//        if var exercises = loadExercises(){
+//            if let index = exercises.indexOf(exercise){
+//                exercises.removeAtIndex(index)
+//                NSKeyedArchiver.archiveRootObject(exercises, toFile: exercisesURL.path!)
+//            }
+//        }
+//    }
     
     func loadExercises() -> [Exercise]?{
         return NSKeyedUnarchiver.unarchiveObjectWithFile(exercisesURL.path!) as? [Exercise]

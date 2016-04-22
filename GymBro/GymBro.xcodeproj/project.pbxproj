@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3D43B261CCA0AB4006D43AA /* PlansExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B251CCA0AB4006D43AA /* PlansExercisesTableViewController.swift */; };
+		E3D43B281CCA143D006D43AA /* AddExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B271CCA143D006D43AA /* AddExerciseTableViewController.swift */; };
+		E3D43B2C1CCA1B2E006D43AA /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B2A1CCA1B2E006D43AA /* ExerciseTableViewCell.swift */; };
+		E3D43B2D1CCA1B2E006D43AA /* ExerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D43B2B1CCA1B2E006D43AA /* ExerciseTableViewCell.xib */; };
+		E3D43B311CCA1F14006D43AA /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B2F1CCA1F14006D43AA /* PlanTableViewCell.swift */; };
+		E3D43B321CCA1F14006D43AA /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D43B301CCA1F14006D43AA /* PlanTableViewCell.xib */; };
+		E3D43B341CCA24F0006D43AA /* AddPlanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B331CCA24F0006D43AA /* AddPlanTableViewController.swift */; };
+		E3D43B371CCA2663006D43AA /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B351CCA2663006D43AA /* NameTableViewCell.swift */; };
+		E3D43B381CCA2663006D43AA /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D43B361CCA2663006D43AA /* NameTableViewCell.xib */; };
 		E3E3673B1CC0D3F0003B8FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */; };
 		E3E3673D1CC0D3F0003B8FAD /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3673C1CC0D3F0003B8FAD /* ResultsTableViewController.swift */; };
 		E3E367401CC0D3F0003B8FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E3673E1CC0D3F0003B8FAD /* Main.storyboard */; };
@@ -68,6 +77,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E3D43B251CCA0AB4006D43AA /* PlansExercisesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansExercisesTableViewController.swift; sourceTree = "<group>"; };
+		E3D43B271CCA143D006D43AA /* AddExerciseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseTableViewController.swift; sourceTree = "<group>"; };
+		E3D43B2A1CCA1B2E006D43AA /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		E3D43B2B1CCA1B2E006D43AA /* ExerciseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseTableViewCell.xib; sourceTree = "<group>"; };
+		E3D43B2F1CCA1F14006D43AA /* PlanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
+		E3D43B301CCA1F14006D43AA /* PlanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
+		E3D43B331CCA24F0006D43AA /* AddPlanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanTableViewController.swift; sourceTree = "<group>"; };
+		E3D43B351CCA2663006D43AA /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		E3D43B361CCA2663006D43AA /* NameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		E3E367371CC0D3F0003B8FAD /* GymBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3E3673C1CC0D3F0003B8FAD /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +126,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3D43B291CCA1AE0006D43AA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E3D43B2A1CCA1B2E006D43AA /* ExerciseTableViewCell.swift */,
+				E3D43B2B1CCA1B2E006D43AA /* ExerciseTableViewCell.xib */,
+				E3D43B2F1CCA1F14006D43AA /* PlanTableViewCell.swift */,
+				E3D43B301CCA1F14006D43AA /* PlanTableViewCell.xib */,
+				E3D43B351CCA2663006D43AA /* NameTableViewCell.swift */,
+				E3D43B361CCA2663006D43AA /* NameTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		E3E3672E1CC0D3F0003B8FAD = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +163,12 @@
 			isa = PBXGroup;
 			children = (
 				E3E367711CC0D67F003B8FAD /* Model */,
+				E3D43B291CCA1AE0006D43AA /* Cells */,
 				E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */,
+				E3D43B331CCA24F0006D43AA /* AddPlanTableViewController.swift */,
+				E3D43B271CCA143D006D43AA /* AddExerciseTableViewController.swift */,
 				E3E3673C1CC0D3F0003B8FAD /* ResultsTableViewController.swift */,
+				E3D43B251CCA0AB4006D43AA /* PlansExercisesTableViewController.swift */,
 				E3E3673E1CC0D3F0003B8FAD /* Main.storyboard */,
 				E3E367411CC0D3F0003B8FAD /* Assets.xcassets */,
 				E3E3677A1CC0E1B8003B8FAD /* DataManager.swift */,
@@ -279,7 +314,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D43B321CCA1F14006D43AA /* PlanTableViewCell.xib in Resources */,
 				E3E367451CC0D3F0003B8FAD /* LaunchScreen.storyboard in Resources */,
+				E3D43B381CCA2663006D43AA /* NameTableViewCell.xib in Resources */,
+				E3D43B2D1CCA1B2E006D43AA /* ExerciseTableViewCell.xib in Resources */,
 				E3E367421CC0D3F0003B8FAD /* Assets.xcassets in Resources */,
 				E3E367401CC0D3F0003B8FAD /* Main.storyboard in Resources */,
 			);
@@ -309,12 +347,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D43B261CCA0AB4006D43AA /* PlansExercisesTableViewController.swift in Sources */,
 				E3E367731CC0D6B8003B8FAD /* WorkoutPlan.swift in Sources */,
 				E3E3677B1CC0E1B8003B8FAD /* DataManager.swift in Sources */,
 				E3E367771CC0DA30003B8FAD /* WorkoutSession.swift in Sources */,
+				E3D43B311CCA1F14006D43AA /* PlanTableViewCell.swift in Sources */,
 				E3E367751CC0D6CD003B8FAD /* Exercise.swift in Sources */,
+				E3D43B371CCA2663006D43AA /* NameTableViewCell.swift in Sources */,
 				E3E3673D1CC0D3F0003B8FAD /* ResultsTableViewController.swift in Sources */,
+				E3D43B2C1CCA1B2E006D43AA /* ExerciseTableViewCell.swift in Sources */,
 				E3E3673B1CC0D3F0003B8FAD /* AppDelegate.swift in Sources */,
+				E3D43B281CCA143D006D43AA /* AddExerciseTableViewController.swift in Sources */,
+				E3D43B341CCA24F0006D43AA /* AddPlanTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +596,7 @@
 				E3E367681CC0D3F0003B8FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3E3676A1CC0D3F0003B8FAD /* Build configuration list for PBXNativeTarget "GymBro WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +605,7 @@
 				E3E3676C1CC0D3F0003B8FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3E3676E1CC0D3F0003B8FAD /* Build configuration list for PBXNativeTarget "GymBro" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +614,7 @@
 				E3E367701CC0D3F0003B8FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
