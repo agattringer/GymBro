@@ -11,6 +11,7 @@ import UIKit
 class AddPlanTableViewController: UITableViewController, NameTableViewCellDelegate {
     let nameReuseIdentifier = "NameCellIdentifier"
     let exerciseCellReuse = "ExerciseCellIdentifier"
+    let defaultCellReuse = "UITableViewCell"
     
     var exercises:[Exercise] = []
     var currentName:String = ""
@@ -24,6 +25,7 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
         self.tableView.registerNib(nib, forCellReuseIdentifier: exerciseCellReuse)
         nib = UINib(nibName: "NameTableViewCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: nameReuseIdentifier)
+        self.tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: defaultCellReuse)
 
         createSaveButtonItem()
     }
@@ -57,15 +59,21 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0){
-            return 1
+            return 2
         }
         return exercises.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if (indexPath.section == 0){
-            let cell:NameTableViewCell = tableView.dequeueReusableCellWithIdentifier(nameReuseIdentifier, forIndexPath: indexPath) as! NameTableViewCell
-            cell.delegate = self
+            if (indexPath.row == 0){
+                let cell:NameTableViewCell = tableView.dequeueReusableCellWithIdentifier(nameReuseIdentifier, forIndexPath: indexPath) as! NameTableViewCell
+                cell.delegate = self
+                return cell
+            }
+            let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(defaultCellReuse, forIndexPath: indexPath) 
+            cell.accessoryType = .DisclosureIndicator
+            cell.textLabel?.text = "Add exercise"
             return cell
         }
         
@@ -76,8 +84,16 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
 
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.section == 0 && indexPath.row == 1){
+            addNewExerciseToPlan()
+        }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if (indexPath.row == 0){
+        if (indexPath.section == 0){
             return 44 //standard cell height
         }
         return ExerciseTableViewCell.cellHeight
@@ -88,6 +104,10 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+    }
+    
+    func addNewExerciseToPlan(){
+        print("new exercise")
     }
     
     func nameEdited(name: String) {
