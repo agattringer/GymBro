@@ -15,22 +15,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Df-8D-uUy">
-                        <rect key="frame" x="8" y="44" width="42" height="21"/>
+                        <rect key="frame" x="16" y="44.5" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svw-sK-QOf">
-                        <rect key="frame" x="8" y="8" width="45" height="21"/>
+                        <rect key="frame" x="16" y="8" width="45" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="1Df-8D-uUy" secondAttribute="bottom" constant="8" id="99K-3r-YUl"/>
-                    <constraint firstItem="1Df-8D-uUy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="N6T-La-qve"/>
-                    <constraint firstItem="svw-sK-QOf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cws-5A-nZA"/>
+                    <constraint firstItem="1Df-8D-uUy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="N6T-La-qve"/>
+                    <constraint firstItem="svw-sK-QOf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cws-5A-nZA"/>
                     <constraint firstItem="svw-sK-QOf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="lYu-1q-ybg"/>
                 </constraints>
             </tableViewCellContentView>

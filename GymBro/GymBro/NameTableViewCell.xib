@@ -15,13 +15,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ6-9F-ptM">
-                        <rect key="frame" x="8" y="11.5" width="42" height="20.5"/>
+                        <rect key="frame" x="16" y="11.5" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My new workout plan" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sZP-GF-4rc">
-                        <rect key="frame" x="58" y="13" width="254" height="19"/>
+                        <rect key="frame" x="66" y="13" width="238" height="19"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                     </textField>
@@ -29,8 +29,8 @@
                 <constraints>
                     <constraint firstItem="DZ6-9F-ptM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UB7-Ba-PVf"/>
                     <constraint firstItem="sZP-GF-4rc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zx5-yD-dyU"/>
-                    <constraint firstItem="DZ6-9F-ptM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fuh-9q-wUb"/>
-                    <constraint firstAttribute="trailing" secondItem="sZP-GF-4rc" secondAttribute="trailing" constant="8" id="k2g-7B-Nkd"/>
+                    <constraint firstItem="DZ6-9F-ptM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="fuh-9q-wUb"/>
+                    <constraint firstAttribute="trailing" secondItem="sZP-GF-4rc" secondAttribute="trailing" constant="16" id="k2g-7B-Nkd"/>
                     <constraint firstItem="sZP-GF-4rc" firstAttribute="leading" secondItem="DZ6-9F-ptM" secondAttribute="trailing" constant="8" id="rI0-JC-duc"/>
                 </constraints>
             </tableViewCellContentView>
