@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E39A23411CD39DC500AA8F70 /* ExerciseSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39A23401CD39DC500AA8F70 /* ExerciseSelectionTableViewController.swift */; };
+		E3A26CDA1CD34911008CAA88 /* SelectionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A26CD91CD34911008CAA88 /* SelectionInterfaceController.swift */; };
+		E3A26CDC1CD35160008CAA88 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A26CDB1CD35160008CAA88 /* DataManager.swift */; };
+		E3A26CDE1CD3520D008CAA88 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A26CDD1CD3520D008CAA88 /* ConnectivityManager.swift */; };
+		E3A26CE61CD36564008CAA88 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367741CC0D6CD003B8FAD /* Exercise.swift */; };
+		E3A26CE71CD36568008CAA88 /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367721CC0D6B8003B8FAD /* WorkoutPlan.swift */; };
+		E3A26CE81CD3677C008CAA88 /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367761CC0DA30003B8FAD /* WorkoutSession.swift */; };
+		E3A26CEA1CD367E9008CAA88 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A26CE91CD367E9008CAA88 /* ConnectivityManager.swift */; };
+		E3A26CEC1CD36E95008CAA88 /* BeginExerciseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A26CEB1CD36E95008CAA88 /* BeginExerciseInterfaceController.swift */; };
+		E3A26CEE1CD37289008CAA88 /* ExerciseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A26CED1CD37289008CAA88 /* ExerciseInterfaceController.swift */; };
+		E3A26CF01CD3729A008CAA88 /* AfterExerciseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A26CEF1CD3729A008CAA88 /* AfterExerciseInterfaceController.swift */; };
+		E3A26CF21CD3835B008CAA88 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A26CF11CD3835B008CAA88 /* HealthKit.framework */; };
+		E3AA80B01CD384C4003E4A4A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA80AF1CD384C4003E4A4A /* HealthKit.framework */; };
+		E3AA80B31CD38626003E4A4A /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AA80B21CD38626003E4A4A /* WorkoutController.swift */; };
 		E3D43B261CCA0AB4006D43AA /* PlansExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B251CCA0AB4006D43AA /* PlansExercisesTableViewController.swift */; };
 		E3D43B281CCA143D006D43AA /* AddExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B271CCA143D006D43AA /* AddExerciseTableViewController.swift */; };
 		E3D43B2C1CCA1B2E006D43AA /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43B2A1CCA1B2E006D43AA /* ExerciseTableViewCell.swift */; };
@@ -25,7 +39,6 @@
 		E3E367501CC0D3F0003B8FAD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E3674E1CC0D3F0003B8FAD /* Interface.storyboard */; };
 		E3E367521CC0D3F0003B8FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E367511CC0D3F0003B8FAD /* Assets.xcassets */; };
 		E3E367591CC0D3F0003B8FAD /* GymBro WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3E367581CC0D3F0003B8FAD /* GymBro WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E3E3675E1CC0D3F0003B8FAD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3675D1CC0D3F0003B8FAD /* InterfaceController.swift */; };
 		E3E367601CC0D3F0003B8FAD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3675F1CC0D3F0003B8FAD /* ExtensionDelegate.swift */; };
 		E3E367621CC0D3F0003B8FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E367611CC0D3F0003B8FAD /* Assets.xcassets */; };
 		E3E367731CC0D6B8003B8FAD /* WorkoutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E367721CC0D6B8003B8FAD /* WorkoutPlan.swift */; };
@@ -77,6 +90,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E39A23401CD39DC500AA8F70 /* ExerciseSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionTableViewController.swift; sourceTree = "<group>"; };
+		E3A26CD91CD34911008CAA88 /* SelectionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionInterfaceController.swift; sourceTree = "<group>"; };
+		E3A26CDB1CD35160008CAA88 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E3A26CDD1CD3520D008CAA88 /* ConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		E3A26CE91CD367E9008CAA88 /* ConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		E3A26CEB1CD36E95008CAA88 /* BeginExerciseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeginExerciseInterfaceController.swift; sourceTree = "<group>"; };
+		E3A26CED1CD37289008CAA88 /* ExerciseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseInterfaceController.swift; sourceTree = "<group>"; };
+		E3A26CEF1CD3729A008CAA88 /* AfterExerciseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AfterExerciseInterfaceController.swift; sourceTree = "<group>"; };
+		E3A26CF11CD3835B008CAA88 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		E3A26CF31CD3835B008CAA88 /* GymBro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GymBro.entitlements; sourceTree = "<group>"; };
+		E3AA80AF1CD384C4003E4A4A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		E3AA80B11CD384C5003E4A4A /* GymBro WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GymBro WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E3AA80B21CD38626003E4A4A /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		E3D43B251CCA0AB4006D43AA /* PlansExercisesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansExercisesTableViewController.swift; sourceTree = "<group>"; };
 		E3D43B271CCA143D006D43AA /* AddExerciseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseTableViewController.swift; sourceTree = "<group>"; };
 		E3D43B2A1CCA1B2E006D43AA /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,7 +124,6 @@
 		E3E367511CC0D3F0003B8FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3E367531CC0D3F0003B8FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3E367581CC0D3F0003B8FAD /* GymBro WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GymBro WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3E3675D1CC0D3F0003B8FAD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		E3E3675F1CC0D3F0003B8FAD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		E3E367611CC0D3F0003B8FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3E367631CC0D3F0003B8FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A26CF21CD3835B008CAA88 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3AA80B01CD384C4003E4A4A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +169,8 @@
 		E3E3672E1CC0D3F0003B8FAD = {
 			isa = PBXGroup;
 			children = (
+				E3AA80AF1CD384C4003E4A4A /* HealthKit.framework */,
+				E3A26CF11CD3835B008CAA88 /* HealthKit.framework */,
 				E3E367391CC0D3F0003B8FAD /* GymBro */,
 				E3E3674D1CC0D3F0003B8FAD /* GymBro WatchKit App */,
 				E3E3675C1CC0D3F0003B8FAD /* GymBro WatchKit Extension */,
@@ -162,6 +191,7 @@
 		E3E367391CC0D3F0003B8FAD /* GymBro */ = {
 			isa = PBXGroup;
 			children = (
+				E3A26CF31CD3835B008CAA88 /* GymBro.entitlements */,
 				E3E367711CC0D67F003B8FAD /* Model */,
 				E3D43B291CCA1AE0006D43AA /* Cells */,
 				E3E3673A1CC0D3F0003B8FAD /* AppDelegate.swift */,
@@ -174,6 +204,8 @@
 				E3E3677A1CC0E1B8003B8FAD /* DataManager.swift */,
 				E3E367431CC0D3F0003B8FAD /* LaunchScreen.storyboard */,
 				E3E367461CC0D3F0003B8FAD /* Info.plist */,
+				E3A26CDD1CD3520D008CAA88 /* ConnectivityManager.swift */,
+				E39A23401CD39DC500AA8F70 /* ExerciseSelectionTableViewController.swift */,
 			);
 			path = GymBro;
 			sourceTree = "<group>";
@@ -191,10 +223,17 @@
 		E3E3675C1CC0D3F0003B8FAD /* GymBro WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E3E3675D1CC0D3F0003B8FAD /* InterfaceController.swift */,
+				E3AA80B11CD384C5003E4A4A /* GymBro WatchKit Extension.entitlements */,
 				E3E3675F1CC0D3F0003B8FAD /* ExtensionDelegate.swift */,
 				E3E367611CC0D3F0003B8FAD /* Assets.xcassets */,
 				E3E367631CC0D3F0003B8FAD /* Info.plist */,
+				E3A26CD91CD34911008CAA88 /* SelectionInterfaceController.swift */,
+				E3A26CDB1CD35160008CAA88 /* DataManager.swift */,
+				E3A26CE91CD367E9008CAA88 /* ConnectivityManager.swift */,
+				E3A26CEB1CD36E95008CAA88 /* BeginExerciseInterfaceController.swift */,
+				E3A26CED1CD37289008CAA88 /* ExerciseInterfaceController.swift */,
+				E3A26CEF1CD3729A008CAA88 /* AfterExerciseInterfaceController.swift */,
+				E3AA80B21CD38626003E4A4A /* WorkoutController.swift */,
 			);
 			path = "GymBro WatchKit Extension";
 			sourceTree = "<group>";
@@ -278,6 +317,11 @@
 					E3E367361CC0D3F0003B8FAD = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 3522ZWYGA6;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					E3E367481CC0D3F0003B8FAD = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -286,6 +330,11 @@
 					E3E367571CC0D3F0003B8FAD = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 3522ZWYGA6;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -353,11 +402,13 @@
 				E3E367771CC0DA30003B8FAD /* WorkoutSession.swift in Sources */,
 				E3D43B311CCA1F14006D43AA /* PlanTableViewCell.swift in Sources */,
 				E3E367751CC0D6CD003B8FAD /* Exercise.swift in Sources */,
+				E3A26CDE1CD3520D008CAA88 /* ConnectivityManager.swift in Sources */,
 				E3D43B371CCA2663006D43AA /* NameTableViewCell.swift in Sources */,
 				E3E3673D1CC0D3F0003B8FAD /* ResultsTableViewController.swift in Sources */,
 				E3D43B2C1CCA1B2E006D43AA /* ExerciseTableViewCell.swift in Sources */,
 				E3E3673B1CC0D3F0003B8FAD /* AppDelegate.swift in Sources */,
 				E3D43B281CCA143D006D43AA /* AddExerciseTableViewController.swift in Sources */,
+				E39A23411CD39DC500AA8F70 /* ExerciseSelectionTableViewController.swift in Sources */,
 				E3D43B341CCA24F0006D43AA /* AddPlanTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,8 +417,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A26CDA1CD34911008CAA88 /* SelectionInterfaceController.swift in Sources */,
+				E3A26CE71CD36568008CAA88 /* WorkoutPlan.swift in Sources */,
+				E3A26CE81CD3677C008CAA88 /* WorkoutSession.swift in Sources */,
+				E3A26CEC1CD36E95008CAA88 /* BeginExerciseInterfaceController.swift in Sources */,
+				E3A26CE61CD36564008CAA88 /* Exercise.swift in Sources */,
+				E3A26CDC1CD35160008CAA88 /* DataManager.swift in Sources */,
+				E3AA80B31CD38626003E4A4A /* WorkoutController.swift in Sources */,
 				E3E367601CC0D3F0003B8FAD /* ExtensionDelegate.swift in Sources */,
-				E3E3675E1CC0D3F0003B8FAD /* InterfaceController.swift in Sources */,
+				E3A26CEA1CD367E9008CAA88 /* ConnectivityManager.swift in Sources */,
+				E3A26CF01CD3729A008CAA88 /* AfterExerciseInterfaceController.swift in Sources */,
+				E3A26CEE1CD37289008CAA88 /* ExerciseInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,10 +558,14 @@
 		E3E367671CC0D3F0003B8FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "GymBro WatchKit Extension/GymBro WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "GymBro WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhhooe.mc.gattringer.GymBro.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -512,10 +576,14 @@
 		E3E367681CC0D3F0003B8FAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "GymBro WatchKit Extension/GymBro WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "GymBro WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhhooe.mc.gattringer.GymBro.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -559,10 +627,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GymBro/GymBro.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GymBro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhhooe.mc.gattringer.GymBro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -570,10 +642,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GymBro/GymBro.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GymBro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhhooe.mc.gattringer.GymBro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

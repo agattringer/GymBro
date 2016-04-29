@@ -1,16 +1,119 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4GU-YB-Wlk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Selection-->
+        <scene sceneID="OgC-QS-zHM">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GymBro_WatchKit_App" customModuleProvider="target"/>
+                <controller identifier="Selection" id="4GU-YB-Wlk" customClass="SelectionInterfaceController" customModule="GymBro_WatchKit_Extension">
+                    <items>
+                        <picker height="104" alignment="left" focusStyle="sequence" id="emB-oF-SwX">
+                            <connections>
+                                <action selector="pickerAction:" destination="4GU-YB-Wlk" id="5Pr-bx-gIi"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Start plan" id="eEi-jD-H4G">
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="K5e-yQ-K5a" kind="push" id="dMJ-s0-biN"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="planPicker" destination="emB-oF-SwX" id="8cT-rf-iVH"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="171" y="268"/>
+            <point key="canvasLocation" x="26" y="246"/>
+        </scene>
+        <!--Begin-->
+        <scene sceneID="7qS-7k-OG6">
+            <objects>
+                <controller identifier="Begin" id="K5e-yQ-K5a" customClass="BeginExerciseInterfaceController" customModule="GymBro_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Exercise" id="oBM-sW-vUT">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="136" alignment="left" text="Squats" textAlignment="center" id="B3Y-Qu-HBu">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="Weight" id="n5H-hl-FSS">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <picker height="43" alignment="left" focusStyle="stack" id="ozI-ft-PBg">
+                            <connections>
+                                <action selector="pickerAction:" destination="K5e-yQ-K5a" id="QAW-MX-iuy"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Start exercise" id="5hc-2N-9UX">
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="F1V-E4-jWA" kind="push" id="ztg-Sk-U8z"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="exerciseName" destination="B3Y-Qu-HBu" id="VXS-0o-Foh"/>
+                        <outlet property="weightPicker" destination="ozI-ft-PBg" id="ax0-l3-A2j"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="325" y="174"/>
+        </scene>
+        <!--Exercise-->
+        <scene sceneID="43I-iS-8b5">
+            <objects>
+                <controller identifier="Exercise" id="F1V-E4-jWA" customClass="ExerciseInterfaceController" customModule="GymBro_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Current time" id="Am6-ks-V5d"/>
+                        <timer width="136" alignment="left" textAlignment="right" format="abbreviated" previewedSeconds="0" id="wec-kS-XHg">
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                        <label alignment="left" text="Heart rate" id="zDT-V7-eVC"/>
+                        <label width="136" alignment="left" text="120 bpm" textAlignment="right" id="btr-cF-XHa"/>
+                        <button width="1" alignment="left" title="End exercise" id="6zD-Oq-YWr">
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="stopWorkout" destination="F1V-E4-jWA" id="Is1-5G-cvf"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="currentBPM" destination="btr-cF-XHa" id="Vkh-3g-H27"/>
+                        <outlet property="timer" destination="wec-kS-XHg" id="iud-cm-5Lb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="183"/>
+        </scene>
+        <!--After-->
+        <scene sceneID="nRG-7t-b6N">
+            <objects>
+                <controller identifier="After" id="x7U-ji-RWT" customClass="AfterExerciseInterfaceController" customModule="GymBro_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Repetitions" id="oJX-7F-jbE"/>
+                        <picker height="43" alignment="left" focusStyle="stack" id="g6c-Q0-LPi">
+                            <connections>
+                                <action selector="pickerAction:" destination="x7U-ji-RWT" id="0bU-VE-2mo"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Next" id="3yc-D5-1MN">
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="endExercise" destination="x7U-ji-RWT" id="czj-z0-076"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="nextButton" destination="3yc-D5-1MN" id="EV5-9q-ebX"/>
+                        <outlet property="repetitionsPicker" destination="g6c-Q0-LPi" id="2iS-mw-eE7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="414" y="462"/>
         </scene>
     </scenes>
 </document>

@@ -7,11 +7,29 @@
 //
 
 import WatchKit
+import WatchConnectivity
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
-
+class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
+    
+    var session : WCSession!
+    
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        if WCSession.isSupported() {
+            session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
+    }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        
+        var workoutPlans = [WorkoutPlan]()
+        if let data = applicationContext["plans"] as? NSData{
+            workoutPlans = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [WorkoutPlan]
+        }
+        
+        DataManager.sharedManager.saveWorkoutPlans(workoutPlans)
+        print("WATCH: Data received")
     }
 
     func applicationDidBecomeActive() {

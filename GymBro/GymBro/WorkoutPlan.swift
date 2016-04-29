@@ -13,6 +13,7 @@ private struct PropertyKey {
     static let exercises = "exercises"
 }
 
+@objc(WorkoutPlan)
 class WorkoutPlan: NSObject, NSCoding{
     
     var name:String
@@ -26,6 +27,7 @@ class WorkoutPlan: NSObject, NSCoding{
     convenience init(name:String, exercises: [Exercise]){
         self.init()
         self.name = name
+        self.exercises = exercises
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,4 +39,11 @@ class WorkoutPlan: NSObject, NSCoding{
         aCoder.encodeObject(name, forKey: PropertyKey.name)
         aCoder.encodeObject(exercises, forKey: PropertyKey.exercises)
     }
+    
+    static func plansToDict(plans: [WorkoutPlan]) -> [String : AnyObject]{
+        let dict = ["plans" : NSKeyedArchiver.archivedDataWithRootObject(plans)]
+        
+        return dict
+    }
+    
 }

@@ -13,6 +13,7 @@ private struct PropertyKey {
     static let usedPlan = "plan"
 }
 
+@objc(WorkoutSession)
 class WorkoutSession: NSObject, NSCoding {
 
     var date:NSDate
@@ -31,6 +32,12 @@ class WorkoutSession: NSObject, NSCoding {
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(date, forKey: PropertyKey.date)
         aCoder.encodeObject(usedPlan, forKey: PropertyKey.usedPlan)
+    }
+    
+    static func sessionsToDict(sessions: [WorkoutSession]) -> [String : AnyObject]{
+        let dict = ["sessions" : NSKeyedArchiver.archivedDataWithRootObject(sessions)]
+        
+        return dict
     }
 }
 

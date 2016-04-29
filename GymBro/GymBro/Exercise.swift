@@ -23,6 +23,7 @@ private struct PropertyKey {
     static let intensity = "intensity"
 }
 
+@objc(Exercise)
 class Exercise: NSObject, NSCoding{
     var name:String
     var duration:Int

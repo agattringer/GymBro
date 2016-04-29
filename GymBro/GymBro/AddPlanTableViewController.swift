@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPlanTableViewController: UITableViewController, NameTableViewCellDelegate {
+class AddPlanTableViewController: UITableViewController, NameTableViewCellDelegate, ExerciseSelectionDelegate {
     let nameReuseIdentifier = "NameCellIdentifier"
     let exerciseCellReuse = "ExerciseCellIdentifier"
     let defaultCellReuse = "UITableViewCell"
@@ -107,11 +107,19 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
     }
     
     func addNewExerciseToPlan(){
-        print("new exercise")
+        let exerciseSelectionController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ExerciseSelection")
+        
+        presentViewController(exerciseSelectionController, animated: true, completion: {
+            self.tableView.reloadData()
+        })
     }
     
     func nameEdited(name: String) {
         self.title = name
         self.currentName = name
+    }
+    
+    func didSelectExercise(exercise: Exercise) {
+        exercises.append(exercise)
     }
 }

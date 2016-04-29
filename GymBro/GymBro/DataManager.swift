@@ -17,7 +17,6 @@ class DataManager: NSObject {
     var exercisesURL:NSURL!
     var savedSessionsURL:NSURL!
     
-    
     //This prevents others from using the default '()' initializer for this class.
     private override init() {
         documentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
@@ -72,6 +71,8 @@ class DataManager: NSObject {
     
     func saveWorkoutPlans(plans: [WorkoutPlan]){
         NSKeyedArchiver.archiveRootObject(plans, toFile: workoutPlansURL.path!)
+        //also send updated context to watch app here
+        ConnectivityManager.sharedManager.sendUpdatedContext(plans)
     }
     
     func loadWorkoutPlans() -> [WorkoutPlan]?{
