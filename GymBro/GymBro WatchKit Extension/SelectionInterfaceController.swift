@@ -13,6 +13,7 @@ import Foundation
 class SelectionInterfaceController: WKInterfaceController {
 
     @IBOutlet var planPicker: WKInterfacePicker!
+    @IBOutlet var start: WKInterfaceButton!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -20,8 +21,14 @@ class SelectionInterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
-        planPicker.setItems(DataManager.sharedManager.loadWorkoutPlanPickerItems())
         WorkoutController.sharedController.startWorkoutWithIndex(0)
+        if (DataManager.sharedManager.loadWorkoutPlans() == nil){
+            //deactivate start button -> no plans yet
+            start.setEnabled(false)
+        }else{
+            start.setEnabled(true)
+        }
+        planPicker.setItems(DataManager.sharedManager.loadWorkoutPlanPickerItems())
     }
     
     

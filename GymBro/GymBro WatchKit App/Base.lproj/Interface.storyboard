@@ -24,6 +24,7 @@
                     </items>
                     <connections>
                         <outlet property="planPicker" destination="emB-oF-SwX" id="8cT-rf-iVH"/>
+                        <outlet property="start" destination="eEi-jD-H4G" id="Xox-pf-E6J"/>
                     </connections>
                 </controller>
             </objects>

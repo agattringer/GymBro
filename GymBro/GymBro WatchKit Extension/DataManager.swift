@@ -49,6 +49,10 @@ class DataManager: NSObject {
                 item.caption = "\(plan.exercises.count) exercise/s"
                 pickerItems.append(item)
             }
+        }else{
+            let item = WKPickerItem()
+            item.title = "No plans yet"
+            pickerItems.append(item)
         }
         
         return pickerItems
