@@ -14,11 +14,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     var session : WCSession!
     
     func applicationDidFinishLaunching() {
-        if WCSession.isSupported() {
-            session = WCSession.defaultSession()
-            session.delegate = self
-            session.activateSession()
-        }
+        
     }
     
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
@@ -33,7 +29,11 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     }
 
     func applicationDidBecomeActive() {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if WCSession.isSupported() {
+            session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
     }
 
     func applicationWillResignActive() {

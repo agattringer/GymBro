@@ -24,6 +24,12 @@ class WorkoutSession: NSObject, NSCoding {
         usedPlan = WorkoutPlan()
     }
     
+    convenience init(date: NSDate, plan:WorkoutPlan){
+        self.init()
+        self.date = date
+        self.usedPlan = plan
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         self.date = aDecoder.decodeObjectForKey(PropertyKey.date) as! NSDate
         self.usedPlan = aDecoder.decodeObjectForKey(PropertyKey.usedPlan) as! WorkoutPlan

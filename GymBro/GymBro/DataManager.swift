@@ -25,14 +25,9 @@ class DataManager: NSObject {
         savedSessionsURL = documentsDirectory.URLByAppendingPathComponent("savedSessions")
     }
     
-    func saveSession(session: WorkoutSession){
-        var sessions = [WorkoutSession]()
-        
-        if let loaded = loadSessions(){
-            sessions.appendContentsOf(loaded)
-        }
-        sessions.append(session)
+    func saveSessions(sessions: [WorkoutSession]){
         NSKeyedArchiver.archiveRootObject(sessions, toFile: savedSessionsURL.path!)
+        ConnectivityManager.sharedManager.sendUpdatedSessions(sessions)
     }
     
     func loadSessions() -> [WorkoutSession]?{
@@ -72,7 +67,7 @@ class DataManager: NSObject {
     func saveWorkoutPlans(plans: [WorkoutPlan]){
         NSKeyedArchiver.archiveRootObject(plans, toFile: workoutPlansURL.path!)
         //also send updated context to watch app here
-        ConnectivityManager.sharedManager.sendUpdatedContext(plans)
+        ConnectivityManager.sharedManager.sendUpdatedPlans(plans)
     }
     
     func loadWorkoutPlans() -> [WorkoutPlan]?{

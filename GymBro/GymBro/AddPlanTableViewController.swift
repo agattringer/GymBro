@@ -39,7 +39,7 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
         //only save when name is longer than 0
         let name = self.currentName
         
-        if (name.characters.count != 0 || exercises.count > 0) {
+        if (name.characters.count != 0 && exercises.count > 0) {
             DataManager.sharedManager.saveWorkoutPlan(WorkoutPlan(name: name, exercises: self.exercises))
             navigationController?.popViewControllerAnimated(true)
         }else{
@@ -78,7 +78,7 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
         }
         
         let cell:ExerciseTableViewCell = tableView.dequeueReusableCellWithIdentifier(exerciseCellReuse, forIndexPath: indexPath) as! ExerciseTableViewCell
-        cell.setExercise(exercises[indexPath.row])
+        cell.setExerciseForCell(exercises[indexPath.row])
         
         return cell
 
@@ -101,14 +101,17 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            if (indexPath.section == 1){
+                exercises.removeAtIndex(indexPath.row)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
+            
         }
     }
     
     func addNewExerciseToPlan(){
-        let exerciseSelectionController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ExerciseSelection")
-        
+        let exerciseSelectionController:ExerciseSelectionTableViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ExerciseSelection") as! ExerciseSelectionTableViewController
+        exerciseSelectionController.delegate = self
         presentViewController(exerciseSelectionController, animated: true, completion: {
             self.tableView.reloadData()
         })
@@ -121,5 +124,6 @@ class AddPlanTableViewController: UITableViewController, NameTableViewCellDelega
     
     func didSelectExercise(exercise: Exercise) {
         exercises.append(exercise)
+        self.tableView.reloadData()
     }
 }

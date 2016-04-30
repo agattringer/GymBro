@@ -40,6 +40,12 @@
                         <label width="136" alignment="left" text="Squats" textAlignment="center" id="B3Y-Qu-HBu">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
+                        <label alignment="left" text="Intensity" id="hhy-EM-xNl">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="136" alignment="left" text="Medium" textAlignment="center" id="ANT-mB-hui">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
                         <label alignment="left" text="Weight" id="n5H-hl-FSS">
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
@@ -57,11 +63,12 @@
                     </items>
                     <connections>
                         <outlet property="exerciseName" destination="B3Y-Qu-HBu" id="VXS-0o-Foh"/>
+                        <outlet property="intensity" destination="ANT-mB-hui" id="t7o-ya-QxP"/>
                         <outlet property="weightPicker" destination="ozI-ft-PBg" id="ax0-l3-A2j"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="325" y="174"/>
+            <point key="canvasLocation" x="325" y="173.25"/>
         </scene>
         <!--Exercise-->
         <scene sceneID="43I-iS-8b5">

@@ -53,7 +53,11 @@ class AfterExerciseInterfaceController: WKInterfaceController {
     }
     
     func workoutFinishedPopUp(){
-        let handler = { self.popToRootController() }
+        let handler = {
+            self.popToRootController()
+            WorkoutController.sharedController.saveFinishedWorkoutToSession()
+        }
+        
         let action1 = WKAlertAction(title: "OK", style: .Default, handler:handler)
         
         presentAlertControllerWithTitle("Workout finished", message: "You did great today!", preferredStyle: .Alert, actions: [action1])

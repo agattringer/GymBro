@@ -60,7 +60,7 @@ class PlansExercisesTableViewController: UITableViewController{
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if (indexPath.section == 1){
           let cell:ExerciseTableViewCell = tableView.dequeueReusableCellWithIdentifier(exerciseCellReuse) as! ExerciseTableViewCell
-            cell.setExercise(self.exercises[indexPath.row])
+            cell.setExerciseForCell(self.exercises[indexPath.row])
             return cell
         }
         let cell:PlanTableViewCell = tableView.dequeueReusableCellWithIdentifier(planCellReuse) as! PlanTableViewCell

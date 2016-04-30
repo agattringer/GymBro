@@ -26,6 +26,8 @@ class DataManager: NSObject {
         }
         sessions.append(session)
         NSKeyedArchiver.archiveRootObject(sessions, toFile: savedSessionsURL.path!)
+        
+        ConnectivityManager.sharedManager.sendUpdatedContext(sessions)
     }
     
     func loadSessions() -> [WorkoutSession]?{

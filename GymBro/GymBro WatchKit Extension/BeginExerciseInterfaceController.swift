@@ -13,6 +13,7 @@ import Foundation
 class BeginExerciseInterfaceController: WKInterfaceController {
     @IBOutlet var exerciseName: WKInterfaceLabel!
     @IBOutlet var weightPicker: WKInterfacePicker!
+    @IBOutlet var intensity: WKInterfaceLabel!
     
     var exercise:Exercise!
     
@@ -23,6 +24,7 @@ class BeginExerciseInterfaceController: WKInterfaceController {
         
         weightPicker.setItems(getItemsForWeight())
         exerciseName.setText(exercise.name)
+        intensity.setText(exercise.intensity.rawValue)
         exercise.weight = 1
     }
     

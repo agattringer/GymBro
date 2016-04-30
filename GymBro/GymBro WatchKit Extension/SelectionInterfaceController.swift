@@ -16,9 +16,15 @@ class SelectionInterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+    }
+    
+    override func willActivate() {
         planPicker.setItems(DataManager.sharedManager.loadWorkoutPlanPickerItems())
         WorkoutController.sharedController.startWorkoutWithIndex(0)
     }
+    
+    
     @IBAction func pickerAction(value: Int) {
         WorkoutController.sharedController.startWorkoutWithIndex(value)
     }

@@ -27,7 +27,7 @@ class ConnectivityManager: NSObject, WCSessionDelegate {
         }
     }
     
-    func sendUpdatedContext(plans: [WorkoutPlan]){
+    func sendUpdatedPlans(plans: [WorkoutPlan]){
         let dataDict = WorkoutPlan.plansToDict(plans)
         do {
             try WCSession.defaultSession().updateApplicationContext(dataDict)
@@ -36,7 +36,23 @@ class ConnectivityManager: NSObject, WCSessionDelegate {
         }
     }
     
+    func sendUpdatedSessions(sessions: [WorkoutSession]){
+        let dataDict = WorkoutSession.sessionsToDict(sessions)
+        do {
+            try WCSession.defaultSession().updateApplicationContext(dataDict)
+        } catch {
+            print("Cannot send data to watch: \(error)")
+        }
+    }
+    
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
-        print("PHONE: Data received")
+        var sessions = [WorkoutSession]()
+        if let data = applicationContext["sessions"] as? NSData{
+            sessions = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [WorkoutSession]
+        }
+        
+        DataManager.sharedManager.saveSessions(sessions)
+        print("WATCH: Data received")
+
     }
 }

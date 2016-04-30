@@ -19,9 +19,16 @@ class WorkoutController: NSObject {
         super.init()
     }
     
+    func saveFinishedWorkoutToSession(){
+        let session = WorkoutSession(date: NSDate(), plan: currentWorkout)
+        DataManager.sharedManager.saveSession(session)
+    }
+    
     func startWorkoutWithIndex(index: Int){
         if let plans = DataManager.sharedManager.loadWorkoutPlans(){
-            currentWorkout = plans[index]
+            if index < plans.count{
+                currentWorkout = plans[index]
+            }
         }
         exerciseIndex = 0
     }
